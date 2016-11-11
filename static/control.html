@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>
+<html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>
+<html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>CSS3自定义Radio样式DEMO演示</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+<body>
+<div id="content">
+    <header>
+        <p>房间管理：223</p>
+    </header>
+    <section class="container">
+        <div class="switch">
+            <input type="radio" class="switch-input" name="view" value="open" id="week" checked>
+            <label for="week" class="switch-label switch-label-off" id="switch-label-off">开启直播</label>
+            <input type="radio" class="switch-input" name="view" value="end" id="month">
+            <label for="month" class="switch-label switch-label-on" id="switch-label-on">结束直播</label>
+            <span class="switch-selection"></span>
+        </div>
+        <div class="switch switch-blue">
+            <input type="radio" class="switch-input" name="select" value="A" id="select_one">
+            <label for="select_one" class="switch-label switch-label-off" id="switch-A">A选手</label>
+            <input type="radio" class="switch-input" name="select" value="B" id="select_two">
+            <label for="select_two" class="switch-label switch-label-on" id="switch-B">B选手</label>
+            <span class="switch-selection"></span>
+        </div>
+
+        <div id="end">
+            <!--<button id="end_guess">结束押分</button>-->
+            <button id="end_guess">结束押分</button>
+            <input type="button" value="结束比赛" id="end_game"/>
+
+        </div>
+    </section>
+</div>
+
+<div style="text-align:center;clear:both;">
+</div>
+</body>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+    $(function () {
+        $("#switch-label-off").on("click", function () {
+            $.ajax({
+                type: "get",
+                url: "http://wangpeng.s1.natapp.cc/gameVideoRoom/control/bet",
+                async: true,
+                data: {
+                    groupId: "7777777",
+                    type: "1",
+                    aorb: "",
+                }
+            });
+        })
+        $("#switch-label-on").on("click", function () {
+            $.ajax({
+                type: "get",
+                url: "http://wangpeng.s1.natapp.cc/gameVideoRoom/control/bet",
+                async: true,
+                data: {
+                    groupId: "7777777",
+                    type: "2",
+                    aorb: "",
+                }
+            });
+        })
+        $("#end_guess").on("click", function () {
+            console.log(555555);
+            $.ajax({
+                type: "get",
+                url: "http://wangpeng.s1.natapp.cc/gameVideoRoom/control/bet",
+                async: true,
+                data: {
+                    groupId: "7777777",
+                    type: "3",
+                    aorb: "",
+                }
+            });
+        });
+        var val = null;
+        $("#switch-A").on("click", function () {
+            val = "A";
+        });
+        $("#switch-B").on("click", function () {
+            val = "B";
+        });
+
+        $("#end_game").on("click", function () {
+
+//            if ($("#select_one").attr("checked") == "checked") {
+//                console.log("A");
+//                var val = "A";
+//            } else if ($("#select_two").attr("checked") == "checked") {
+//                console.log("B");
+//                var val = "B";
+//            } else {
+//                alert("请选择优胜者！");
+//            }
+            if(!val) {
+                alert("请选择优胜者！");
+            }
+            $.ajax({
+                type: "get",
+                url: "http://wangpeng.s1.natapp.cc/gameVideoRoom/control/bet",
+                async: true,
+                data: {
+                    groupId: "7777777",
+                    type: "4",
+                    aorb: val,
+                }
+            });
+        })
+    })
+</script>
+<script type="text/javascript">
+    var end_div = document.getElementById("end");
+    var end_guess = end_div.getElementsByTagName("button")[0];
+    var end_game = end_div.getElementsByTagName("input")[0];
+
+    end_guess.onmousedown = function () {
+        this.style.background = "black";
+    };
+    end_game.onmousedown = function () {
+        this.style.background = "black";
+    };
+    end_guess.onmouseup = function () {
+        this.style.background = "green";
+    };
+    end_game.onmouseup = function () {
+        this.style.background = "green";
+    };
+</script>
+
+</html>

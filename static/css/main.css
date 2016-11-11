@@ -1,0 +1,1014 @@
+body {
+    background: #fafafa;
+}
+
+#content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 37.5rem;
+    height: 100%;
+}
+
+#content #title {
+    width: 37.5rem;
+    height: 4rem;
+    display: -webkit-box;
+    /*display: box;*/
+    border-bottom: 2px solid #e5e5e5;
+}
+
+#content #title .title_bar {
+    -webkit-box-flex: 1;
+    width: 0;
+    height: 4rem;
+    text-align: center;
+    line-height: 4rem;
+    font-size: 1.2rem;
+    color: #333333;
+}
+
+#content #title #title_one {
+    color: #FF5569;
+}
+
+#content #title #title_line {
+    position: absolute;
+    left: 0;
+    top: 4rem;
+    width: 12.5rem;
+    height: 2px;
+    background: #ff5569;
+    transition: left 0.2s;
+}
+
+#content .guess_info_page {
+    transition: opacity 0.9s;
+    -webkit-transition: opacity 0.9s;
+    position: absolute;
+    left: 0;
+    top: 4rem;
+    width: 100%;
+}
+
+#content .guess_info_page .guessplay_head_line {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 11.5rem;
+    margin-top: 1.75rem;
+}
+
+#content .guess_info_page .guessplay_head_line .guessplay_head {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 37.5rem;
+    height: 5.25rem;
+    line-height: 5.25rem;
+}
+
+#content .guess_info_page .guessplay_head_line .guessplay_head .guessplayA_head {
+    position: absolute;
+    left: 1.2rem;
+    top: 0;
+    width: 12.5rem;
+    height: 5.25rem;
+    display: inline-block;
+}
+
+#content .guess_info_page .guessplay_head_line .guessplay_head .guessplayA_head .img_A {
+    display: inline-block;
+    width: 5.25rem;
+    height: 5.25rem;
+    background: url("../img/bb.png") no-repeat;
+    background-size: 100% 100%;
+    border: 1px solid #ff5569;
+    border-radius: 50%;
+    vertical-align: top;
+}
+
+#content .guess_info_page .guessplay_head_line .guessplay_head .guessplayA_head p {
+    margin-left: 1rem;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1.2rem;
+}
+
+#content .guess_info_page .guessplay_head_line .guessplay_head span {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+#content .guess_info_page .guessplay_head_line .guessplay_head .guessplayB_head {
+    position: absolute;
+    right: 1.2rem;
+    top: 0;
+    width: 12.5rem;
+    height: 5.25rem;
+    display: inline-block;
+}
+
+#content .guess_info_page .guessplay_head_line .guessplay_head .guessplayB_head .img_B {
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    width: 5.25rem;
+    height: 5.25rem;
+    background: url("../img/aa.png") no-repeat;
+    background-size: 100% 100%;
+    border: 1px solid #00d4c3;
+    border-radius: 50%;
+    vertical-align: top;
+}
+
+#content .guess_info_page .guessplay_head_line .guessplay_head .guessplayB_head p {
+    position: absolute;
+    right: 6.65rem;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1.2rem;
+}
+
+#content .guess_info_page .guessplay_head_line .guess_line {
+    position: absolute;
+    top: 0rem;
+    width: 35.1rem;
+    height: 2rem;
+}
+
+#content .guess_info_page .guessplay_head_line .guess_line_content {
+    position: absolute;
+    left: 1.5rem;
+    top: 9.5rem;
+    width: 34rem;
+    height: 2rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+#content .guess_info_page .guessplay_head_line .guess_line_one {
+    position: absolute;
+    left: 1.2rem;
+    width: 17rem;
+    background: #ff5569;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+#content .guess_info_page .guessplay_head_line .guess_line_one span {
+    position: absolute;
+    left: 2.1rem;
+    font-size: 1.1rem;
+    color: white;
+    font-weight: bold;
+    line-height: 2rem;
+}
+
+#content .guess_info_page .guessplay_head_line .guess_line_two {
+    position: absolute;
+    right: 1.2rem;
+    width: 20rem;
+    background: #00d4c3;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+#content .guess_info_page .guessplay_head_line .guess_line_two span {
+    position: absolute;
+    right: 2.1rem;
+    font-size: 1.1rem;
+    color: white;
+    font-weight: bold;
+    line-height: 2rem;
+}
+
+#content .guess_info_page .guess_info {
+    position: absolute;
+    width: 100%;
+    height: 7.5rem;
+    top: 19.65rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#content .guess_info_page .guess_info > div {
+    display: inline-block;
+}
+
+#content .guess_info_page .guess_info #playA_info {
+    position: absolute;
+    left: 5rem;
+    top: 0;
+    width: 6.5rem;
+    height: 100%;
+    font-size: 1.2rem;
+    color: #ff5569;
+    text-align: center;
+}
+
+#content .guess_info_page .guess_info #playA_info p {
+    margin-bottom: 2rem;
+}
+
+#content .guess_info_page .guess_info #info_word {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    color: #333333;
+    text-align: center;
+}
+
+#content .guess_info_page .guess_info #info_word p {
+    margin-bottom: 1.6rem;
+}
+
+#content .guess_info_page .guess_info #playB_info {
+    position: absolute;
+    right: 5rem;
+    top: 0;
+    width: 6.5rem;
+    height: 100%;
+    font-size: 1.2rem;
+    color: #ff5569;
+    text-align: center;
+}
+
+#content .guess_info_page .guess_info #playB_info p {
+    margin-bottom: 2rem;
+}
+
+#content .guess_info_page #guess_now {
+    position: absolute;
+    left: 8.75rem;
+    top: 32.7rem;
+    width: 20.15rem;
+    height: 4rem;
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    line-height: 4rem;
+    background: #fe5568;
+    border-radius: 2rem;
+}
+
+#content .guess_grade {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 4rem;
+    width: 100%;
+}
+
+#content .guess_grade .guessplay_head_mygold {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 11.5rem;
+}
+
+#content .guess_grade .guessplay_head_mygold .guessplay_head {
+    position: absolute;
+    left: 0;
+    top: 1.75rem;
+    width: 37.5rem;
+    height: 5.25rem;
+    line-height: 5.25rem;
+}
+
+#content .guess_grade .guessplay_head_mygold .guessplay_head .guessplayA_head {
+    position: absolute;
+    left: 1.2rem;
+    top: 0;
+    width: 15.45rem;
+    height: 5.25rem;
+    display: inline-block;
+}
+
+#content .guess_grade .guessplay_head_mygold .guessplay_head .guessplayA_head .img_A {
+    display: inline-block;
+    width: 5.25rem;
+    height: 5.25rem;
+    background: url("../img/bb.png") no-repeat;
+    background-size: 100% 100%;
+    border: 1px solid #ff5569;
+    border-radius: 50%;
+    vertical-align: top;
+}
+
+#content .guess_grade .guessplay_head_mygold .guessplay_head .guessplayA_head p {
+    position: absolute;
+    left: 5.2rem;
+    top: 0;
+    width: 8.2rem;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1.2rem;
+}
+
+#content .guess_grade .guessplay_head_mygold .guessplay_head .guessplayA_head .choseAPic {
+    position: absolute;
+    left: 13.35rem;
+    top: 1.65rem;
+    width: 2.1rem;
+    height: 2.1rem;
+    background: url("../img/gou1.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+#content .guess_grade .guessplay_head_mygold .guessplay_head .guessplayA_head .choseA {
+    position: absolute;
+    left: 13.35rem;
+    top: 1.65rem;
+    width: 2.1rem;
+    height: 2.1rem;
+    border-radius: 50%;
+    box-shadow: 0 0 4px 1px #ff5569 inset;
+}
+
+#content .guess_grade .guessplay_head_mygold .guessplay_head .guessplayB_head {
+    position: absolute;
+    right: 1.2rem;
+    top: 0;
+    width: 15.45rem;
+    height: 5.25rem;
+    display: inline-block;
+}
+
+#content .guess_grade .guessplay_head_mygold .guessplay_head .guessplayB_head .img_B {
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    width: 5.25rem;
+    height: 5.25rem;
+    background: url("../img/aa.png") no-repeat;
+    background-size: 100% 100%;
+    border: 1px solid #00d4c3;
+    border-radius: 50%;
+    vertical-align: top;
+}
+
+#content .guess_grade .guessplay_head_mygold .guessplay_head .guessplayB_head p {
+    position: absolute;
+    left: 2.15rem;
+    top: 0;
+    width: 8.2rem;
+    right: 6rem;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+#content .guess_grade .guessplay_head_mygold .guessplay_head .guessplayB_head .choseBPic {
+    position: absolute;
+    left: 0;
+    top: 1.65rem;
+    width: 2.1rem;
+    height: 2.1rem;
+    background: url("../img/gou2.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+#content .guess_grade .guessplay_head_mygold .guessplay_head .guessplayB_head .choseB {
+    position: absolute;
+    left: 0;
+    top: 1.65rem;
+    width: 2.1rem;
+    height: 2.1rem;
+    border-radius: 50%;
+    box-shadow: 0 0 4px 1px #00d4c3 inset;
+}
+
+#content .guess_grade .guessplay_head_mygold .mygold {
+    position: absolute;
+    left: 0;
+    top: 0;
+    top: 8.75rem;
+    width: 37.5rem;
+    height: 4.15rem;
+    line-height: 4.15rem;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#content .guess_grade .guessplay_head_mygold .mygold > span {
+    margin-left: 1.2rem;
+}
+
+#content .guess_grade .guessplay_head_mygold .mygold > span span {
+    color: #ff5569;
+}
+
+#content .guess_grade .guessplay_head_mygold .mygold button {
+    position: absolute;
+    right: 1.2rem;
+    top: 0.75rem;
+    width: 6.15rem;
+    height: 2.5rem;
+    border: 1px solid #ff5569;
+    border-radius: 5px;
+    outline: none;
+    background: #fafafa;
+    color: #ff5569;
+}
+
+#content .guess_grade .chip_content {
+    position: absolute;
+    left: 0;
+    top: 13rem;
+    width: 37.5rem;
+    height: 20rem;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+#content .guess_grade .chip_content #chip {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 28rem;
+    height: 20rem;
+}
+
+#content .guess_grade .chip_content #chip div div {
+    display: inline-block;
+}
+
+#content .guess_grade .chip_content #chip > div {
+    width: 28rem;
+    height: 10rem;
+}
+
+#content .guess_grade .chip_content #chip > div div {
+    width: 4.35rem;
+    height: 6.5rem;
+    margin-left: 4.5rem;
+    margin-top: 2.25rem;
+    text-align: center;
+}
+
+#content .guess_grade .chip_content #chip > div div img {
+    width: 3.2rem;
+    height: 2.65rem;
+}
+
+#content .guess_grade .chip_content #chip > div div p:nth-of-type(2) {
+    color: #ff5569;
+}
+
+#content .guess_grade .chip_content #chip > div div:nth-of-type(1) {
+    margin-left: 2.8rem;
+}
+
+#content .guess_grade .chip_content #chip > div:nth-of-type(2) {
+    border: 1px solid #dddddd;
+    border-bottom: none;
+}
+
+#content .guess_grade .chip_content #chip > div:nth-of-type(2) #chipEveryBottomThree p:nth-of-type(2) {
+    margin-left: -0.3rem;
+}
+
+#content .guess_grade .chip_content #chip > div:nth-of-type(1) {
+    border: 1px solid #dddddd;
+    border-bottom: none;
+    border-top: none;
+}
+
+#content .guess_grade .chip_content .all_or_half {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 9.5rem;
+    height: 20rem;
+    color: white;
+}
+
+#content .guess_grade .chip_content .all_or_half .all {
+    width: 5.1rem;
+    height: 5.1rem;
+    background: #ff5569;
+    text-align: center;
+    line-height: 5.1rem;
+    border-radius: 50%;
+    margin-left: 2.5rem;
+    margin-top: 3rem;
+}
+
+#content .guess_grade .chip_content .all_or_half .half {
+    width: 5.1rem;
+    height: 5.1rem;
+    background: #ff5569;
+    text-align: center;
+    line-height: 5.1rem;
+    border-radius: 50%;
+    margin-left: 2.5rem;
+    margin-top: 4.5rem;
+}
+
+#content .guess_grade .gold_return {
+    position: absolute;
+    left: 0;
+    top: 33rem;
+    width: 37.5rem;
+    height: 8.5rem;
+}
+
+#content .guess_grade .gold_return .return {
+    position: absolute;
+    left: 0;
+    top: 2rem;
+    width: 37.5rem;
+    height: 2rem;
+}
+
+#content .guess_grade .gold_return .return > span:nth-of-type(1) {
+    position: absolute;
+    left: 5.8rem;
+    top: 0;
+    font-size: 1.2rem;
+}
+
+#content .guess_grade .gold_return .return > span:nth-of-type(1) span {
+    color: #ff5569;
+}
+
+#content .guess_grade .gold_return .return > span:nth-of-type(2) {
+    position: absolute;
+    right: 5.8rem;
+    font-size: 1.2rem;
+    top: 0;
+}
+
+#content .guess_grade .gold_return .return > span:nth-of-type(2) span {
+    color: #ff5569;
+}
+
+#content .guess_grade .gold_return button:nth-of-type(1) {
+    position: absolute;
+    left: 4.25rem;
+    top: 5.25rem;
+    outline: none;
+    background: #ff5569;
+    border-radius: 1.2rem;
+    border: none;
+    width: 12.5rem;
+    height: 3rem;
+    color: white;
+    font-size: 1.2rem;
+}
+
+#content .guess_grade .gold_return button:nth-of-type(2) {
+    position: absolute;
+    right: 4.25rem;
+    top: 5.25rem;
+    outline: none;
+    background: #ff5569;
+    border-radius: 1.2rem;
+    border: none;
+    width: 12.5rem;
+    height: 3rem;
+    color: white;
+    font-size: 1.2rem;
+}
+
+#content .guess_grade .gold_return button:nth-of-type(3) {
+    display: none;
+    position: absolute;
+    right: 4.25rem;
+    top: 5.25rem;
+    outline: none;
+    background: #d1d1d1;
+    border-radius: 1.2rem;
+    border: none;
+    width: 12.5rem;
+    height: 3rem;
+    color: white;
+    font-size: 1.2rem;
+}
+
+#content .play_info_content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 4rem;
+    width: 37.5rem;
+    height: 20rem;
+}
+
+#content .play_info_content .guessplay_head_info {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 11.5rem;
+}
+
+#content .play_info_content .guessplay_head_info .guessplay_head {
+    position: absolute;
+    left: 0;
+    top: 1.75rem;
+    width: 37.5rem;
+    height: 5.25rem;
+}
+
+#content .play_info_content .guessplay_head_info .guessplay_head .guessplayA_head {
+    position: absolute;
+    left: 6.4rem;
+    top: 0;
+    width: 5.25rem;
+    height: 7.65rem;
+    display: inline-block;
+}
+
+#content .play_info_content .guessplay_head_info .guessplay_head .guessplayA_head .img_A {
+    width: 5.25rem;
+    height: 5.25rem;
+    background: url("../img/bb.png") no-repeat;
+    background-size: 100% 100%;
+    border: 1px solid #ff5569;
+    border-radius: 50%;
+}
+
+#content .play_info_content .guessplay_head_info .guessplay_head .guessplayA_head p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 1.2rem;
+}
+
+#content .play_info_content .guessplay_head_info .guessplay_head span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.4rem;
+}
+
+#content .play_info_content .guessplay_head_info .guessplay_head .guessplayB_head {
+    position: absolute;
+    right: 6.4rem;
+    top: 0;
+    width: 5.25rem;
+    height: 7.65rem;
+    display: inline-block;
+}
+
+#content .play_info_content .guessplay_head_info .guessplay_head .guessplayB_head .img_B {
+    right: 0;
+    width: 5.25rem;
+    height: 5.25rem;
+    background: url("../img/aa.png") no-repeat;
+    background-size: 100% 100%;
+    border: 1px solid #00d4c3;
+    border-radius: 50%;
+}
+
+#content .play_info_content .guessplay_head_info .guessplay_head .guessplayB_head p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 1.2rem;
+}
+
+#content .play_info_content .eachother_info {
+    position: absolute;
+    width: 100%;
+    height: 7.5rem;
+    top: 13rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#content .play_info_content .eachother_info > div {
+    display: inline-block;
+}
+
+#content .play_info_content .eachother_info #playA_info {
+    position: absolute;
+    left: 5rem;
+    top: 0;
+    width: 6.5rem;
+    height: 100%;
+    font-size: 1.2rem;
+    color: #ff5569;
+    text-align: center;
+}
+
+#content .play_info_content .eachother_info #playA_info p {
+    margin-bottom: 2rem;
+}
+
+#content .play_info_content .eachother_info #info_word {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    color: #333333;
+    text-align: center;
+}
+
+#content .play_info_content .eachother_info #info_word p {
+    margin-bottom: 1.6rem;
+}
+
+#content .play_info_content .eachother_info #playB_info {
+    position: absolute;
+    right: 5rem;
+    top: 0;
+    width: 6.5rem;
+    height: 100%;
+    font-size: 1.2rem;
+    color: #ff5569;
+    text-align: center;
+}
+
+#content .play_info_content .eachother_info #playB_info p {
+    margin-bottom: 2rem;
+}
+
+#content .play_info_content .lastten {
+    position: absolute;
+    left: 0;
+    top: 20.75rem;
+    width: 37.5rem;
+    height: 3rem;
+    font-size: 1.2rem;
+}
+
+#content .play_info_content .lastten > div {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#content .play_info_content .lastten li {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#content .play_info_content .lastten > div:nth-of-type(1) {
+    position: absolute;
+    left: 4.85rem;
+    top: 0;
+}
+
+#content .play_info_content .lastten > div:nth-of-type(2) {
+    position: absolute;
+    right: 4.85rem;
+    top: 0;
+}
+
+#content .play_info_content .lastten span {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#content .play_info_content .lastten ul li {
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    font-size: 0.6rem;
+    text-align: center;
+    line-height: 1.25rem;
+    margin-left: 0.4rem;
+}
+
+#content .play_info_content .lastten ul .loss {
+    background: #00d4c0;
+}
+
+#content .play_info_content .lastten ul .win {
+    background: #ff536a;
+}
+
+#content .recharge_content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 37.5rem;
+    height: 20rem;
+}
+
+#content .recharge_content .recharge_return {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    font-size: 3rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1);
+    text-align: center;
+    line-height: 4rem;
+}
+
+#content .recharge_content .recharge_top {
+    position: absolute;
+    left: 0;
+    top: 6.5rem;
+    width: 37.5rem;
+    height: 21.5rem;
+}
+
+#content .recharge_content .recharge_top .item_one {
+    position: absolute;
+    left: 4.4rem;
+    top: 0;
+}
+
+#content .recharge_content .recharge_top .item_one div {
+    background: url("../img/aa.png") no-repeat;
+    background-size: 100% 100%;
+    border-radius: 50%;
+    border: 1px solid #999999;
+}
+
+#content .recharge_content .recharge_top .item_two {
+    position: absolute;
+    right: 4.4rem;
+    top: 0;
+}
+
+#content .recharge_content .recharge_top .item_two div {
+    background: url("../img/aa.png") no-repeat;
+    background-size: 100% 100%;
+    border-radius: 50%;
+    border: 1px solid #999999;
+}
+
+#content .recharge_content .recharge_bottom {
+    position: absolute;
+    left: 0;
+    top: 28rem;
+    width: 37.5rem;
+    height: 21.5rem;
+}
+
+#content .recharge_content .recharge_bottom .item_three {
+    position: absolute;
+    left: 4.4rem;
+    top: 0;
+}
+
+#content .recharge_content .recharge_bottom .item_three div {
+    background: url("../img/aa.png") no-repeat;
+    background-size: 100% 100%;
+    border-radius: 50%;
+    border: 1px solid #999999;
+}
+
+#content .recharge_content .recharge_bottom .item_four {
+    position: absolute;
+    right: 4.4rem;
+    top: 0;
+}
+
+#content .recharge_content .recharge_bottom .item_four div {
+    background: url("../img/aa.png") no-repeat;
+    background-size: 100% 100%;
+    border-radius: 50%;
+    border: 1px solid #999999;
+}
+
+#content .recharge_content .item {
+    display: inline-block;
+    vertical-align: center;
+    height: 17.1rem;
+    width: 10rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+#content .recharge_content .item div {
+    margin-left: 1.125rem;
+    width: 7.75rem;
+    height: 7.75rem;
+}
+
+#content .recharge_content .item p:nth-of-type(1) {
+    margin-top: 1.55rem;
+    color: #ff5569;
+}
+
+#content .recharge_content .item p:nth-of-type(2) {
+    margin-top: 1.25rem;
+    color: #cccccc;
+}
+
+#content .recharge_content .item button {
+    outline: none;
+    width: 10rem;
+    height: 2.5rem;
+    background: #ff5569;
+    border-radius: 1.1rem;
+    border: none;
+    margin-top: 1.65rem;
+}
+
+#content #confirm {
+    display: none;
+    position: absolute;
+    left: 6.25rem;
+    top: 21rem;
+    width: 25rem;
+    height: 12rem;
+    background: white;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+    overflow: hidden;
+}
+
+#content #confirm #confirmInfo {
+    width: 100%;
+    height: 8rem;
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#content #confirm #confirmInfo p:nth-child(1) {
+    padding-top: 2.25rem;
+}
+
+#content #confirm #confirmInfo p:nth-child(2) {
+    margin-top: 1.25rem;
+}
+
+#content #confirm #confirmInfo p:nth-child(2) span {
+    color: #ff5569;
+}
+
+#content #confirm #confirmBtn {
+    width: 100%;
+    height: 4rem;
+}
+
+#content #confirm #confirmBtn button {
+    background: white;
+    border: none;
+    float: left;
+    width: 12.5rem;
+    height: 100%;
+    font-size: 1.4rem;
+    color: #ff5569;
+}
+
+#content #confirm #confirmBtn button:nth-child(1) {
+    border-right: 1px solid #e5e5e5;
+}
+
+#content #confirm_shop {
+    display: none;
+    position: absolute;
+    left: 6.25rem;
+    top: 21rem;
+    width: 25rem;
+    height: 12rem;
+    background: white;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+    overflow: hidden;
+}
+
+#content #confirm_shop div:nth-of-type(1) {
+    width: 100%;
+    height: 4rem;
+    text-align: center;
+    line-height: 4rem;
+}
+
+#content #confirm_shop div:nth-of-type(2) {
+    width: 100%;
+    height: 4rem;
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#content #confirm_shop #confirmBtn_shop {
+    width: 100%;
+    height: 4rem;
+}
+
+#content #confirm_shop #confirmBtn_shop button {
+    background: white;
+    border: none;
+    float: left;
+    width: 12.5rem;
+    height: 100%;
+    font-size: 1.4rem;
+    color: #ff5569;
+}
+
+#content #confirm_shop #confirmBtn_shop button:nth-child(1) {
+    border-right: 1px solid #e5e5e5;
+}
+
+/*# sourceMappingURL=main.css.map */

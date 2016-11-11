@@ -1,0 +1,883 @@
+@charset "utf-8";
+$bgColor: #fafafa;
+$fontColor: #333333;
+body {
+    background: $bgColor;
+}
+//html {
+//  width: 100%;
+//  height: 100%;
+//}
+#content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: (750rem/20);
+    height: 100%;
+    #title {
+        width: (750rem/20);
+        height: (80rem/20);
+        display: -webkit-box;
+        display: box;
+        border-bottom: 2px solid #e5e5e5;
+        .title_bar {
+            -webkit-box-flex: 1;
+            width: 0;
+            height: (80rem/20);
+            text-align: center;
+            line-height: (80rem/20);
+            font-size: (24rem/20);
+            color: $fontColor;
+        }
+        #title_one {
+            color: #FF5569;
+        }
+        #title_line {
+            position: absolute;
+            left: 0;
+            top: (80rem/20);
+            width: (750rem/60);
+            height: 2px;
+            background: #ff5569;
+            transition: left 0.2s;
+        }
+    }
+    //压分信息页面
+    .guess_info_page {
+        //      display: none;
+//      opacity: 0;
+        transition: opacity 0.9s;
+        -webkit-transition: opacity 0.9s;
+        position: absolute;
+        left: 0;
+        top: (80rem/20);
+        width: 100%;
+        .guessplay_head_line {
+            position: relative;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: (230rem/20);
+            margin-top: (35rem/20);
+            .guessplay_head {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: (750rem/20);
+                height: (105rem/20);
+                line-height: (105rem/20);
+                .guessplayA_head {
+                    position: absolute;
+                    left: (24rem/20);
+                    top: 0;
+                    width: (250rem/20);
+                    height: (105rem/20);
+                    display: inline-block;
+                    .img_A {
+                        display: inline-block;
+                        width: (105rem/20);
+                        height: (105rem/20);
+                        background: url("../img/bb.png") no-repeat;
+                        background-size: 100% 100%;
+                        border: 1px solid #ff5569;
+                        border-radius: 50%;
+                        vertical-align: top;
+                    }
+                    p {
+                        margin-left: (20rem/20);
+                        display: inline-block;
+                        vertical-align: top;
+                        font-size: (24rem/20);
+                    }
+                }
+                span {
+                    position: absolute;
+                    left: 50%;
+                    transform: translate(-50%);
+                    font-size: (26rem/20);
+                    font-weight: bold;
+                }
+                .guessplayB_head {
+                    position: absolute;
+                    right: (24rem/20);
+                    top: 0;
+                    width: (250rem/20);
+                    height: (105rem/20);
+                    display: inline-block;
+                    .img_B {
+                        position: absolute;
+                        right: 0;
+                        display: inline-block;
+                        width: (105rem/20);
+                        height: (105rem/20);
+                        background: url("../img/aa.png") no-repeat;
+                        background-size: 100% 100%;
+                        border: 1px solid #00d4c3;
+                        border-radius: 50%;
+                        vertical-align: top;
+                    }
+                    p {
+                        position: absolute;
+                        right: (133rem/20);
+                        display: inline-block;
+                        vertical-align: top;
+                        font-size: (24rem/20);
+                    }
+                }
+            }
+            //押分线
+            .guess_line {
+                position: absolute;
+                top: (190rem/20);
+                width: (702rem/20);
+                height: (40rem/20);
+            }
+            .guess_line_one {
+                left: (24rem/20);
+                width: (300rem/20);
+                background: #ff5569;
+                border-top-left-radius: (20rem/20);
+                border-bottom-left-radius: (20rem/20);
+                span {
+                    position: absolute;
+                    left: (42rem/20);
+                    font-size: (22rem/20);
+                    color: white;
+                    font-weight: bold;
+                    line-height: (40rem/20);
+                }
+            }
+            .guess_line_two {
+                right: (24rem/20);
+                width: (500rem/20);
+                background: #00d4c3;
+                border-top-right-radius: (20rem/20);
+                border-bottom-right-radius: (20rem/20);
+                span {
+                    position: absolute;
+                    right: (42rem/20);
+                    font-size: (22rem/20);
+                    color: white;
+                    font-weight: bold;
+                    line-height: (40rem/20);
+                }
+            }
+        }
+        .guess_info {
+            position: absolute;
+            width: 100%;
+            height: (150rem/20);
+            top: (393rem/20);
+            left: 50%;
+            transform: translateX(-50%);
+            & > div {
+                display: inline-block;
+            }
+            #playA_info {
+                position: absolute;
+                left: (100rem/20);
+                top: 0;
+                width: (130rem/20);
+                height: 100%;
+                font-size: (24rem/20);
+                color: rgb(255, 85, 105);
+                text-align: center;
+                p {
+                    margin-bottom: (40rem/20);
+                }
+            }
+            #info_word {
+                position: absolute;
+                left: 50%;
+                top: 0;
+                transform: translateX(-50%);
+                font-size: (24rem/20);
+                color: rgb(51, 51, 51);
+                text-align: center;
+                p {
+                    margin-bottom: (32rem/20);
+                }
+            }
+            #playB_info {
+                position: absolute;
+                right: (100rem/20);
+                top: 0;
+                width: (130rem/20);
+                height: 100%;
+                font-size: (24rem/20);
+                color: rgb(255, 85, 105);
+                text-align: center;
+                p {
+                    margin-bottom: (40rem/20);
+                }
+            }
+        }
+        #guess_now {
+            position: absolute;
+            left: (175rem/20);
+            top: (654rem/20);
+            width: (403rem/20);
+            height: (80rem/20);
+            font-size: (24rem/20);
+            color: white;
+            text-align: center;
+            line-height: (80rem/20);
+            background: #fe5568;
+            border-radius: (40rem/20);
+        }
+    }
+    //2.压分页面
+    .guess_grade {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: (80rem/20);
+        width: 100%;
+        .guessplay_head_mygold {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: (230rem/20);
+            .guessplay_head {
+                position: absolute;
+                left: 0;
+                top: (35rem/20);
+                width: (750rem/20);
+                height: (105rem/20);
+                line-height: (105rem/20);
+                .guessplayA_head {
+                    position: absolute;
+                    left: (24rem/20);
+                    top: 0;
+                    width: (309rem/20);
+                    height: (105rem/20);
+                    display: inline-block; //                  line-height: (105rem/20);
+                    .img_A {
+                        display: inline-block;
+                        width: (105rem/20);
+                        height: (105rem/20);
+                        background: url("../img/bb.png") no-repeat;
+                        background-size: 100% 100%;
+                        border: 1px solid #ff5569;
+                        border-radius: 50%;
+                        vertical-align: top;
+                    }
+                    p {
+                        position: absolute;
+                        left: (104rem/20);
+                        top: 0;
+                        width: (164rem/20); //                      margin-left: (14rem/20);
+                        text-align: center;
+                        display: inline-block;
+                        vertical-align: top;
+                        font-size: (24rem/20);
+                    }
+                    .choseAPic {
+                        position: absolute;
+                        left: (267rem/20);
+                        top: (33rem/20);
+                        width: (42rem/20);
+                        height: (42rem/20);
+                        background: url("../img/gou1.png") no-repeat;
+                        background-size: 100% 100%; //                      margin-left: (10rem/20);
+                    }
+                    .choseA {
+                        position: absolute;
+                        left: (267rem/20);
+                        top: (33rem/20);
+                        width: (42rem/20);
+                        height: (42rem/20);
+                        border-radius: 50%;
+                        box-shadow: 0 0 4px 1px #ff5569 inset;
+                    }
+                }
+                .guessplayB_head {
+                    position: absolute;
+                    right: (24rem/20);
+                    top: 0;
+                    width: (309rem/20);
+                    height: (105rem/20);
+                    display: inline-block;
+                    .img_B {
+                        position: absolute;
+                        right: 0;
+                        display: inline-block;
+                        width: (105rem/20);
+                        height: (105rem/20);
+                        background: url("../img/aa.png") no-repeat;
+                        background-size: 100% 100%;
+                        border: 1px solid #00d4c3;
+                        border-radius: 50%;
+                        vertical-align: top;
+                    }
+                    p {
+                        position: absolute;
+                        left: (43rem/20);
+                        top: 0;
+                        width: (164rem/20);
+                        right: (120rem/20);
+                        display: inline-block;
+                        vertical-align: top;
+                        font-size: (24rem/20);
+                        text-align: center;
+                    }
+                    .choseBPic {
+                        position: absolute;
+                        left: 0;
+                        top: (33rem/20);
+                        width: (42rem/20);
+                        height: (42rem/20);
+                        background: url("../img/gou2.png") no-repeat;
+                        background-size: 100% 100%;
+                    }
+                    .choseB {
+                        position: absolute;
+                        left: 0;
+                        top: (33rem/20);
+                        width: (42rem/20);
+                        height: (42rem/20); //                      border: 1px solid #9cc;
+                        border-radius: 50%;
+                        box-shadow: 0 0 4px 1px #00d4c3 inset;
+                    }
+                }
+            }
+            .mygold {
+                position: absolute;
+                left: 0;
+                top: 0;
+                top: (175rem/20);
+                width: (750rem/20);
+                height: (83rem/20);
+                line-height: (83rem/20);
+                border-top: 1px solid #e5e5e5;
+                border-bottom: 1px solid #e5e5e5;
+                & >span {
+                    margin-left: (24rem/20);
+                    span {
+                        color: #ff5569;
+                    }
+                }
+                button {
+                    position: absolute;
+                    right: (24rem/20);
+                    top: (15rem/20);
+                    width: (123rem/20);
+                    height: (50rem/20);
+                    border: 1px solid #ff5569;
+                    border-radius: 5px;
+                    outline: none;
+                    background: $bgColor;
+                    color: #ff5569;
+                }
+            }
+        }
+        .chip_content {
+            position: absolute;
+            left: 0;
+            top: (260rem/20);
+            width: (750rem/20);
+            height: (400rem/20);
+            border-bottom: 1px solid #DDDDDD;
+            #chip {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: (560rem/20);
+                height: (400rem/20);
+                div {
+                    div {
+                        display: inline-block;
+                    }
+                }
+                & > div {
+                    width: (560rem/20);
+                    height: (200rem/20);
+                    div {
+                        width: (87rem/20);
+                        height: (130rem/20);
+                        margin-left: (90rem/20); //                   line-height: (130rem/20);
+                        margin-top: (45rem/20);
+                        text-align: center;
+                        img {
+                            width: (64rem/20);
+                            height: (53rem/20);
+                        }
+                        p:nth-of-type(2) {
+                            color: rgb(255, 85, 105);
+                        }
+                    }
+                    div:nth-of-type(1) {
+                        margin-left: (56rem/20);
+                    }
+                }
+                & > div:nth-of-type(2) {
+                    border: 1px solid #dddddd;
+                    border-bottom: none;
+                    #chipEveryBottomThree {
+                        p:nth-of-type(2) {
+                            margin-left: (-6rem/20);
+                        }
+                    }
+                }
+                & > div:nth-of-type(1) {
+                    border: 1px solid #dddddd;
+                    border-bottom: none;
+                    border-top: none;
+                }
+            }
+            .all_or_half {
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: (190rem/20);
+                height: (400rem/20);
+                color: white;
+                .all {
+                    width: (102rem/20);
+                    height: (102rem/20);
+                    background: #ff5569;
+                    text-align: center;
+                    line-height: (102rem/20);
+                    border-radius: 50%;
+                    margin-left: (50rem/20);
+                    margin-top: (60rem/20);
+                }
+                .half {
+                    width: (102rem/20);
+                    height: (102rem/20);
+                    background: #ff5569;
+                    text-align: center;
+                    line-height: (102rem/20);
+                    border-radius: 50%;
+                    margin-left: (50rem/20);
+                    margin-top: (90rem/20);
+                }
+            }
+        }
+        .gold_return {
+            position: absolute;
+            left: 0;
+            top: (660rem/20);
+            width: (750rem/20);
+            height: (170rem/20);
+            .return {
+                position: absolute;
+                left: 0;
+                top: (40rem/20);
+                width: (750rem/20);
+                height: (40rem/20);
+                & > span:nth-of-type(1) {
+                    position: absolute;
+                    left: (116rem/20);
+                    top: 0;
+                    font-size: (24rem/20);
+                    span {
+                        color: #ff5569;
+                    }
+                }
+                & > span:nth-of-type(2) {
+                    position: absolute;
+                    right: (116rem/20);
+                    font-size: (24rem/20);
+                    top: 0;
+                    span {
+                        color: #ff5569;
+                    }
+                }
+            }
+            button:nth-of-type(1) {
+                position: absolute;
+                left: (85rem/20);
+                top: (105rem/20);
+                outline: none;
+                background: #ff5569;
+                border-radius: (24rem/20);
+                border: none;
+                width: (250rem/20);
+                height: (60rem/20);
+                color: white;
+                font-size: (24rem/20);
+            }
+            button:nth-of-type(2) {
+                position: absolute;
+                right: (85rem/20);
+                top: (105rem/20);
+                outline: none;
+                background: #ff5569;
+                border-radius: (24rem/20);
+                border: none;
+                width: (250rem/20);
+                height: (60rem/20);
+                color: white;
+                font-size: (24rem/20);
+            }
+        }
+    }
+    //对局者信息
+    .play_info_content {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: (80rem/20);
+        width: (750rem/20);
+        height: (400rem/20);
+        .guessplay_head_info {
+            position: relative;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: (230rem/20); //          margin-top: (35rem/20);
+            .guessplay_head {
+                position: absolute;
+                left: 0;
+                top: (35rem/20);
+                width: (750rem/20);
+                height: (105rem/20); //              line-height: (105rem/20);
+                .guessplayA_head {
+                    position: absolute;
+                    left: (128rem/20);
+                    top: 0;
+                    width: (105rem/20);
+                    height: (153rem/20);
+                    display: inline-block;
+                    .img_A {
+                        width: (105rem/20);
+                        height: (105rem/20);
+                        background: url("../img/bb.png") no-repeat;
+                        background-size: 100% 100%;
+                        border: 1px solid #ff5569;
+                        border-radius: 50%;
+                    }
+                    p {
+                        //                      margin-left: (14rem/20);
+                        text-align: center;
+                        font-size: (24rem/20);
+                        margin-top: (24rem/20);
+                    }
+                }
+                span {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%,-50%);
+                    font-size: (28rem/20); //                  font-weight: bold;
+                }
+                .guessplayB_head {
+                    position: absolute;
+                    right: (128rem/20);
+                    top: 0;
+                    width: (105rem/20);
+                    height: (153rem/20);
+                    display: inline-block;
+                    .img_B {
+                        //                      position: absolute;
+                        right: 0;
+                        width: (105rem/20);
+                        height: (105rem/20);
+                        background: url("../img/aa.png") no-repeat;
+                        background-size: 100% 100%;
+                        border: 1px solid #00d4c3;
+                        border-radius: 50%;
+                    }
+                    p {
+                        text-align: center; //                      position: absolute;
+                        //                      right: (120rem/20);
+                        font-size: (24rem/20);
+                        margin-top: (24rem/20);
+                    }
+                }
+            }
+        }
+        .eachother_info {
+            position: absolute;
+            width: 100%;
+            height: (150rem/20);
+            top: (260rem/20);
+            left: 50%;
+            transform: translateX(-50%);
+            & > div {
+                display: inline-block;
+            }
+            #playA_info {
+                position: absolute;
+                left: (100rem/20);
+                top: 0;
+                width: (130rem/20);
+                height: 100%;
+                font-size: (24rem/20);
+                color: rgb(255, 85, 105);
+                text-align: center;
+                p {
+                    margin-bottom: (40rem/20);
+                }
+            }
+            #info_word {
+                position: absolute;
+                left: 50%;
+                top: 0;
+                transform: translateX(-50%);
+                font-size: (24rem/20);
+                color: rgb(51, 51, 51);
+                text-align: center;
+                p {
+                    margin-bottom: (32rem/20);
+                }
+            }
+            #playB_info {
+                position: absolute;
+                right: (100rem/20);
+                top: 0;
+                width: (130rem/20);
+                height: 100%;
+                font-size: (24rem/20);
+                color: rgb(255, 85, 105);
+                text-align: center;
+                p {
+                    margin-bottom: (40rem/20);
+                }
+            }
+        }
+        .lastten {
+            position: absolute;
+            left: 0;
+            top: (415rem/20);
+            width: (750rem/20);
+            height: (60rem/20);
+            font-size: (24rem/20);
+            & > div {
+                display: inline-block;
+                vertical-align: top;
+            }
+            li {
+                display: inline-block;
+                vertical-align: top;
+            }
+            & > div:nth-of-type(1) {
+                position: absolute;
+                left: (97rem/20);
+                top: 0;
+            }
+            & > div:nth-of-type(2) {
+                position: absolute;
+                right: (97rem/20);
+                top: 0;
+            }
+            span {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            ul {
+                li {
+                    width: (25rem/20);
+                    height: (25rem/20);
+                    border-radius: 50%;
+                    font-size: (12rem/20);
+                    text-align: center;
+                    line-height: (25rem/20);
+                    margin-left: (8rem/20);
+                }
+                .loss {
+                    background: #00d4c0;
+                }
+                .win {
+                    background: #ff536a;
+                }
+            }
+        }
+    }
+    //充值界面
+    .recharge_content {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: (750rem/20);
+        height: (400rem/20);
+        .recharge_return {
+            position: absolute;
+            top: (15rem/20);
+            right: (20rem/20);
+            font-size: (60rem/20);
+            width: (80rem/20);
+            height: (80rem/20);
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.1);
+            text-align: center;
+            line-height: (80rem/20);
+        }
+        .recharge_top {
+            position: absolute;
+            left: 0;
+            top: (130rem/20); //87
+            width: (750rem/20);
+            height: (430rem/20);
+            .item_one {
+                position: absolute;
+                left: (88rem/20);
+                top: 0;
+                div {
+                    background: url("../img/aa.png") no-repeat;
+                    background-size: 100% 100%;
+                    border-radius: 50%;
+                    border: 1px solid #999999;
+                }
+            }
+            .item_two {
+                position: absolute;
+                right: (88rem/20);
+                top: 0;
+                div {
+                    background: url("../img/aa.png") no-repeat;
+                    background-size: 100% 100%;
+                    border-radius: 50%;
+                    border: 1px solid #999999;
+                }
+            }
+        }
+        .recharge_bottom {
+            position: absolute;
+            left: 0;
+            top: (560rem/20); //525
+            width: (750rem/20);
+            height: (430rem/20);
+            .item_three {
+                position: absolute;
+                left: (88rem/20);
+                top: 0;
+                div {
+                    background: url("../img/aa.png") no-repeat;
+                    background-size: 100% 100%;
+                    border-radius: 50%;
+                    border: 1px solid #999999;
+                }
+            }
+            .item_four {
+                position: absolute;
+                right: (88rem/20);
+                top: 0;
+                div {
+                    background: url("../img/aa.png") no-repeat;
+                    background-size: 100% 100%;
+                    border-radius: 50%;
+                    border: 1px solid #999999;
+                }
+            }
+        }
+        .item {
+            display: inline-block;
+            vertical-align: center;
+            height: (342rem/20);
+            width: (200rem/20);
+            font-size: (24rem/20);
+            text-align: center;
+            div {
+                margin-left: (45rem/40);
+                width: (155rem/20);
+                height: (155rem/20);
+            }
+            p:nth-of-type(1) {
+                margin-top: (31rem/20);
+                color: #ff5569;
+            }
+            p:nth-of-type(2) {
+                margin-top: (25rem/20);
+                color: #cccccc;
+            }
+            button {
+                outline: none;
+                width: (200rem/20);
+                height: (50rem/20);
+                background: #ff5569;
+                border-radius: (22rem/20);
+                border: none;
+                margin-top: (33rem/20);
+            }
+        }
+    }
+    //确认界面
+    #confirm {
+        display: none;
+        position: absolute;
+        left: (125rem/20);
+        top: (420rem/20);
+        width: (500rem/20);
+        height: (240rem/20);
+        background: white;
+        border-radius: (20rem/20);
+        font-size: (28rem/20);
+        overflow: hidden;
+        #confirmInfo {
+            width: 100%;
+            height: (160rem/20);
+            text-align: center;
+            border-bottom: 1px solid #e5e5e5;
+            p:nth-child(1) {
+                padding-top: (45rem/20);
+            }
+            p:nth-child(2) {
+                margin-top: (25rem/20);
+                span {
+                    color: rgb(255, 85, 105);
+                }
+            }
+        }
+        #confirmBtn {
+            width: 100%;
+            height: (80rem/20);
+            button {
+                background: white;
+                border: none;
+                float: left;
+                width: (250rem/20);
+                height: 100%;
+                font-size: (28rem/20);
+                color: rgb(255, 85, 105);
+            }
+            button:nth-child(1) {
+                border-right: 1px solid #e5e5e5;
+            }
+        }
+    }
+    #confirm_shop {
+        display: none;
+        position: absolute;
+        left: (125rem/20);
+        top: (420rem/20);
+        width: (500rem/20);
+        height: (240rem/20);
+        background: white;
+        border-radius: (20rem/20);
+        font-size: (28rem/20);
+        overflow: hidden;
+        div:nth-of-type(1) {
+            width: 100%;
+            height: (80rem/20); //          display: inline-block;
+            text-align: center;
+            line-height: (80rem/20); //          border-bottom: 1px solid #e5e5e5;
+        }
+        div:nth-of-type(2) {
+            width: 100%;
+            height: (80rem/20);
+            text-align: center; //           line-height: (80rem/20);
+            border-bottom: 1px solid #e5e5e5;
+        }
+        #confirmBtn_shop {
+            width: 100%;
+            height: (80rem/20);
+            button {
+                background: white;
+                border: none;
+                float: left;
+                width: (250rem/20);
+                height: 100%;
+                font-size: (28rem/20);
+                color: rgb(255, 85, 105);
+            }
+            button:nth-child(1) {
+                border-right: 1px solid #e5e5e5;
+            }
+        }
+    }
+}
